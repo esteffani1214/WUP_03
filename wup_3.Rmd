@@ -48,8 +48,19 @@ Here we can see the exact numbers that correspond with our box plots above. The 
   
 ## Inferential Tests
 
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
 
+My p-value from the anova test is 0.000116. That means that there is at least two rows in the data where the amount of alcohol is statistically different. If the null hypothesis were true, then there is a 0.000116% chance that there are two rows with significant difference in alcohol consumption. To find which rows are different, we will run a TukeyHSD test.
 
+```{r}
+plot(TukeyHSD(model1))
+```
+  
+If you look at the front compared to the back, the differences in the mean level of drinking appear to be between 4-12 drinks more than the front. The back section appears to be drinking 10-3 drinks more than the middle. There doesn't appear to be any difference in the middle and front mean level, and we can see this because 0 is found within the confidence interval.   
+  
 ## Conclusions
 
 
