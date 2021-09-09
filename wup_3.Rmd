@@ -28,13 +28,16 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 basicCN + geom_boxplot()
 ```
   
-  
+Viewing this boxplot, we can see that the 75th percentile of people who sit in the back is way higher than both the front area and the middle area. The median amounts of alcohol for the front-seat students and middle-seat students are about 0 and 1, respectively. The median for the back-seat students is about 5. Based on these observations, we can assume that students who sit closer to the back drink more than students who sit towards the front.   
+    
 ### get fancy  
 
 ```{r}
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
+In this fancy box plot, we can see that the median amount of alcohol is still higher in the back section than it is in the middle or front section. However, we can see that the boxes on this plot contain notches towards the center where the median is located. This is an indication of the standard deviation. There is a wider standard deviation in the back seat section compared to the standard deviation for the front seat section and the standard deviation for the middle seat section. This supports our earlier claim, but this also supports the new idea that there is more variation in the back than there is in the front and the middle.   
+  
 ## Numerical Summarys 
 
 ## Inferential Tests
