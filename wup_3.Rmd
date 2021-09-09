@@ -40,7 +40,15 @@ In this fancy box plot, we can see that the median amount of alcohol is still hi
   
 ## Numerical Summarys 
 
+```{r}
+favstats(alcohol~Seat,data=davisdata)
+```
+  
+Here we can see the exact numbers that correspond with our box plots above. The mean amount of alcohol that the back-seat students drink is 9.6, while the mean amount of alcohol that the middle-seat students drink is about 3.3, and the mean amount that the front-seat students drink is 1.8. The standard deviation(sd) for the back-seat students is almost 13, while the sd for the front-seat students is 3.9, and the sd for the back-seat students is 6.4. So, we can see that these numbers agree with both of our claims that the back seat students drink more than the front and middle seat students, but there is also more variation in the back-seat data than for the front-seat and middle-seat.
+  
 ## Inferential Tests
+
+
 
 ## Conclusions
 
